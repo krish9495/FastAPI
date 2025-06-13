@@ -38,3 +38,55 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install fastapi uvicorn
+```
+▶️ Running the API
+uvicorn main:app --reload
+Visit the interactive API docs at: http://127.0.0.1:8000/docs
+```
+```
+📂 API Endpoints
+Method	Endpoint	Description
+GET	/	Welcome message
+GET	/about	About the project
+GET	/view	View all patient records
+GET	/patient/{id}	View a specific patient
+POST	/create	Add a new patient
+PUT	/edit/{id}	Update patient details (partial OK)
+DELETE	/delete/{id}	Delete a patient
+GET	/sort	Sort patients by height/weight/BMI
+```
+```
+📘 Example JSON Data (patients.json)
+
+{
+  "P001": {
+    "name": "Ananya Verma",
+    "city": "Guwahati",
+    "age": 28,
+    "gender": "female",
+    "height": 1.65,
+    "weight": 90.0,
+    "bmi": 33.06,
+    "verdict": "Obese"
+  }
+}
+```
+```
+📏 Validation Rules
+Age: Must be between 1 and 99
+
+Gender: One of male, female, others
+
+Height/Weight: Must be positive
+
+BMI & Verdict: Automatically computed on create/update
+```
+```
+🧪 Testing
+You can test the endpoints using:
+
+Swagger UI: http://127.0.0.1:8000/docs
+
+Postman or any REST client
+```
+🚀
