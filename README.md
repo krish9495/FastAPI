@@ -84,7 +84,7 @@ Height/Weight: Must be positive
 BMI & Verdict: Automatically computed on create/update
 
 
-##🧪 Testing
+## 🧪 Testing
 You can test the endpoints using:
 
 Swagger UI: http://127.0.0.1:8000/docs
