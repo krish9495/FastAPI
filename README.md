@@ -39,12 +39,14 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install fastapi uvicorn
 ```
-▶️ Running the API
+## ▶️ Running the API
+```bash 
 uvicorn main:app --reload
 Visit the interactive API docs at: http://127.0.0.1:8000/docs
 ```
-```
-📂 API Endpoints
+
+## 📂 API Endpoints
+```bash 
 Method	Endpoint	Description
 GET	/	Welcome message
 GET	/about	About the project
@@ -55,7 +57,7 @@ PUT	/edit/{id}	Update patient details (partial OK)
 DELETE	/delete/{id}	Delete a patient
 GET	/sort	Sort patients by height/weight/BMI
 ```
-```
+
 📘 Example JSON Data (patients.json)
 
 {
@@ -70,8 +72,8 @@ GET	/sort	Sort patients by height/weight/BMI
     "verdict": "Obese"
   }
 }
-```
-```
+
+
 📏 Validation Rules
 Age: Must be between 1 and 99
 
@@ -80,13 +82,12 @@ Gender: One of male, female, others
 Height/Weight: Must be positive
 
 BMI & Verdict: Automatically computed on create/update
-```
-```
+
 🧪 Testing
 You can test the endpoints using:
 
 Swagger UI: http://127.0.0.1:8000/docs
 
 Postman or any REST client
-```
-🚀
+
+
