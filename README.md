@@ -58,8 +58,8 @@ DELETE	/delete/{id}	Delete a patient
 GET	/sort	Sort patients by height/weight/BMI
 ```
 
-📘 Example JSON Data (patients.json)
-
+## 📘 Example JSON Data (patients.json)
+```bash
 {
   "P001": {
     "name": "Ananya Verma",
@@ -72,9 +72,9 @@ GET	/sort	Sort patients by height/weight/BMI
     "verdict": "Obese"
   }
 }
+```
 
-
-📏 Validation Rules
+## 📏 Validation Rules
 Age: Must be between 1 and 99
 
 Gender: One of male, female, others
@@ -83,7 +83,8 @@ Height/Weight: Must be positive
 
 BMI & Verdict: Automatically computed on create/update
 
-🧪 Testing
+
+##🧪 Testing
 You can test the endpoints using:
 
 Swagger UI: http://127.0.0.1:8000/docs
